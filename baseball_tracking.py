@@ -18,9 +18,9 @@ def select_video():
     root = tk.Tk()
     root.withdraw()  # 隱藏主視窗
     file_path = filedialog.askopenfilename(
-        title="選擇視訊檔案",
+        title="選擇影片檔案",
         filetypes=[
-            ("視訊檔案", "*.mp4 *.avi *.mov"),
+            ("影片檔案", "*.mp4 *.avi *.mov"),
             ("所有檔案", "*.*")
         ]
     )
@@ -180,10 +180,10 @@ def track_baseball(video_path, output_path):
     ball_model = YOLO(ball_model)
     pitcher_model = YOLO(pitcher_model)
     
-    # 開啟視訊檔案
+    # 開啟影片檔案
     cap = cv2.VideoCapture(video_path)
     
-    # 獲取視訊屬性
+    # 獲取影片屬性
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = int(cap.get(cv2.CAP_PROP_FPS))
@@ -198,7 +198,7 @@ def track_baseball(video_path, output_path):
     scaled_width = int(width * scale_factor)
     scaled_height = int(height * scale_factor)
     
-    # 建立視訊寫入器
+    # 建立影片寫入器
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
     
@@ -434,10 +434,10 @@ def track_baseball(video_path, output_path):
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    # 選擇輸入視訊
+    # 選擇輸入影片
     video_path = select_video()
     if not video_path:
-        print("未選擇視訊檔案，程式退出")
+        print("未選擇影片檔案，程式退出")
         exit()
     
     # 生成輸出檔案路徑
