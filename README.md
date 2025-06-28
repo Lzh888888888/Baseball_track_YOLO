@@ -78,6 +78,17 @@ python baseball_tracking.py
 - 實現多層發光效果
 - 支援影片縮放處理
 
+## 演示效果
+
+以下演示影片使用本工具進行棒球軌跡追蹤：
+
+### 程式處理效果
+#### 原始影片追蹤效果
+https://github.com/user-attachments/assets/40857fdd-85b9-4f70-8b62-2d9d789ccd72
+
+> **備註**：
+> - 演示影片來源：[YouTube](https://www.youtube.com/watch?v=0vXIiNiDhLk&t=44s&ab_channel=%E6%84%9B%E7%88%BE%E9%81%94%E9%AB%94%E8%82%B2%E5%AE%B6%E6%97%8FELTASports)
+
 ## 授權說明
 
 本專案採用 MIT 授權條款 
